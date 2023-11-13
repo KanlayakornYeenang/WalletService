@@ -19,12 +19,11 @@ public class TransactionRestModel {
     private User payer;
     private User payee;
     private BigDecimal amount;
-    private String description;
-    public TransactionRestModel(String _id, String timestamp, User payee, BigDecimal amount, String description) {
-        this(_id, timestamp, null, payee, amount, description);
+    public TransactionRestModel(String _id, String timestamp, User payee, BigDecimal amount) {
+        this(_id, timestamp, null, payee, amount);
     }
 
-    public TransactionRestModel(String _id, String timestamp, User payer, User payee, BigDecimal amount, String description) {
+    public TransactionRestModel(String _id, String timestamp, User payer, User payee, BigDecimal amount) {
         this._id = _id;
         this.timestamp = timestamp;
 
@@ -43,6 +42,5 @@ public class TransactionRestModel {
         }
 
         this.amount = amount;
-        this.description = description;
     }
 }

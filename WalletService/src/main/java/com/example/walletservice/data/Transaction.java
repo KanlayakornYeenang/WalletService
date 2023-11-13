@@ -19,17 +19,15 @@ public class Transaction implements Serializable {
     private String payer_wallet_id;
     private String payee_wallet_id;
     private BigDecimal amount;
-    private String description;
 
     public Transaction() {
     }
 
-    public Transaction(String _id, String timestamp, String payer_wallet_id, String payee_wallet_id, BigDecimal amount, String description) {
+    public Transaction(String _id, String timestamp, String payer_wallet_id, String payee_wallet_id, BigDecimal amount) {
         this._id = _id;
         this.timestamp = timestamp;
         this.payer_wallet_id = payer_wallet_id;
         this.payee_wallet_id = payee_wallet_id;
         this.amount = amount;
-        this.description = description;
     }
 }

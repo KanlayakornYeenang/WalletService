@@ -11,11 +11,8 @@ import lombok.Data;
 @Data
 public class WalletRestModel {
     private Wallet wallet;
-    private User user;
 
-    public WalletRestModel(Wallet wallet, User user) {
+    public WalletRestModel(Wallet wallet) {
         this.wallet = wallet;
-        this.user = user;
-        wallet.setUser_id(null);
     }
 }
